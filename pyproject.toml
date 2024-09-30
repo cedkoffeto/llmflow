@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "llmflow"
+version = "0.1.0"
+description = "`LLMFlow` is an open-source library built on top of [LangChain](https://langchain.com) that brings the power of Large Language Models (LLMs) to Machine Learning tasks, combining human expertise with automated models."
+authors = ["Cedric Koffeto <38736306+cedkoffeto@users.noreply.github.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.9"
+langchain = "^0.3.1"
+pandas = "^2.2.3"
+sklearn = "^0.0.post12"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
