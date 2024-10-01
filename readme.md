@@ -8,14 +8,15 @@
 
 
 
-`LLMFlow` is an open-source library built on top of [LangChain](https://langchain.com) that brings the power of Large Language Models (LLMs) to Machine Learning tasks, combining human expertise with automated models. It provides a scikit-learn-like API to handle DataFrames and other ML tasks, making it easy to inject domain knowledge and human analysis into ML pipelines.
+`LLMFlow` is an open-source library that leverages Large Language Models (LLMs) to go beyond traditional machine learning by integrating human domain expertise. Built on top of [LangChain](https://langchain.com), LLMFlow combines the expansive knowledge of LLMs with metadata provided by experts to enhance the accuracy of predictions, classifications, and forecasts. It offers a **scikit-learn-like API** for seamless integration with **DataFrames**.
 
 ## Key Features
-- **Seamless Human + LLM Hybrid Models**: Combine the power of LLMs with human domain expertise for classification, regression, time-series, and more.
-- **scikit-learn Inspired API**: Use a familiar interface to build and run models on structured and unstructured data.
-- **Built on LangChain**: Leveraging LangChain to work with transformers and other LLMs.
-- **Plug and Play with DataFrames**: Directly operate on pandas DataFrames, providing rich data handling capabilities.
-- **Customizable and Extendable**: Modify pipelines to fit your custom needs, inject human judgment where it’s crucial.
+- **LLMs with Human Expertise**: Combine LLMs' broad general knowledge with domain-specific insights from human experts. The LLMs can access vast contextual information across many fields, while human-provided metadata refines the predictions.
+- **scikit-learn Inspired API**: Easily integrate LLMs into your machine learning workflows using a familiar API style, designed for handling both structured and unstructured data.
+- **Built on LangChain**: Utilize LangChain’s framework to chain LLM models and automate complex tasks while accessing LLMs’ broad contextual understanding.
+- **DataFrame Integration**: Directly handle and manipulate **pandas DataFrames** to fit traditional tabular data while augmenting it with metadata from human experts.
+- **Custom Metadata Injection**: Enrich your datasets with human-supplied metadata that reflects domain-specific nuances, improving model predictions beyond what is possible with raw data alone.
+
 
 ## Use Cases
 - **Classification**: Easily classify text data with the help of human inputs to fine-tune results.
