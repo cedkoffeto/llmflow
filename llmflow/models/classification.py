@@ -3,7 +3,6 @@ from sklearn.metrics import accuracy_score
 from transformers import pipeline
 from langchain.llms.base import BaseLLM
 from metadatas import BaseMetadata
-from langchain.prompts import FewShotPromptTemplate
 
 class LLMBaseClassifier(BaseEstimator, ClassifierMixin):
     """
@@ -37,16 +36,7 @@ class LLMBaseClassifier(BaseEstimator, ClassifierMixin):
 
         """
         # Create a  langchain prompt that includes the metadata and the data
-        prompt = FewShotPromptTemplate(self.metadata, X).generate_prompt()
-        # Generate prompt using langchain functions
-        prompt = self.llm.generate_prompt(self.metadata, X)
-
-        # Create a chain to process the prompt and get the output text
-        chain = pipeline("text-generation", model=self.llm.model)
-        output = chain(prompt, max_length=100)[0]['generated_text']
-
-        # Use the output text as the prompt for classification
-        prompt = FewShotPromptTemplate(self.metadata, X).generate_prompt(prompt=output)
+        prompt = LLMBaseClassifierFitPrompt
         
         
 
